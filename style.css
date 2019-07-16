@@ -1,0 +1,136 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  }
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.game__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.game__score {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-block {
+  position: relative;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+
+.game-block--computer {
+  margin-right: 10px;
+}
+
+.game-block__name {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.game__btn {
+  font-family: inherit;
+  font-size: 18px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  width: 150px;
+  margin: 0 auto;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.game__btn:hover,
+.game__btn:focus {
+  background-color: black;
+  color: white;
+}
+
+svg {
+  border: 2px solid #c2c2c2;
+  padding: 3px;
+  margin-bottom: 10px;
+  fill: #c2c2c2;
+}
+
+.player-svg {
+  fill: black;
+  border-color: black;
+}
+
+.player-svg:hover,
+.player-svg:focus {
+  cursor: pointer;
+  background-color: black;
+  fill: white;
+}
+
+.game__panel-win {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.game__wins,
+.game__losses {
+  margin-bottom: 5px;
+}
+
+.game__alert {
+  left: 50%;
+  top: 205px;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 150px;
+}
+
+.game-block__player-modal-img {
+  display: none;
+}
+
+
+
+
+
+
+
+.a {
+  position: absolute;
+  left: 85px;
+  top: 150px;
+}
+
+.b {
+  position: absolute;
+  left: 150px;
+}
+
+
+
+

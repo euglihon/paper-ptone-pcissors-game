@@ -14,36 +14,25 @@
 <main class="game">
   <h1 class="game__title">Paper-stone-scissors</h1>
   <b class="game__score-title">Score</b>
-  <p class="game__score"><span>0</span> : <span>0</span></p>
+  <p class="game__score"><span class="game__score--win">0</span> : <span class="game__score--losses">0</span></p>
 
   <div class="wrapper">
     <div class="game-block">
       <b class="game-block__name">Player</b>
-      <svg class="player-svg game-block__paper"  width="50px" height="50px">
+
+      <svg data-option="paper" class="player-svg">
         <use xlink:href="sprite.svg#paper"></use>
       </svg>
-      <svg class="player-svg game-block__stone"  width="50px" height="50px">
+      <svg data-option="stone" class="player-svg">
         <use xlink:href="sprite.svg#stone"></use>
       </svg>
-      <svg class="player-svg game-block__scissors"  width="50px" height="50px">
-        <use xlink:href="sprite.svg#scissors"></use>
-      </svg>
-
-      <svg class="game-block__player-modal-img game-block__player-modal-img--paper"  width="50px" height="50px">
-        <use xlink:href="sprite.svg#paper"></use>
-      </svg>
-
-      <svg class="game-block__player-modal-img game-block__player-modal-img--stone"  width="50px" height="50px">
-        <use xlink:href="sprite.svg#stone"></use>
-      </svg>
-
-      <svg class="game-block__player-modal-img game-block__player-modal-img--scissors" width="50px" height="50px">
+      <svg data-option="scissors" class="player-svg">
         <use xlink:href="sprite.svg#scissors"></use>
       </svg>
     </div>
 
     <div class="game-block game-block--computer">
-      <b class="game-block__name">Comp</b>
+      <b class="game-block__name">AI</b>
       <svg width="50px" height="50px">
         <use xlink:href="sprite.svg#paper"></use>
       </svg>
@@ -56,20 +45,14 @@
     </div>
   </div>
 
+  <p class="game__panel-win">who will win ?</p>
   <button class="game__btn">Let's play!</button>
-
-  <p class="game__panel-win">Results of the game</p>
-
   <div class="game__panel-results">
     <p class="game__wins">win: <span>0</span></p>
     <p class="game__losses">losses: <span>0</span></p>
     <p class="game__draws">draw: <span>0</span></p>
   </div>
-
   <div class="game__alert">Pick your hand</div>
-
-
-
   <script src="main.js"></script>
 </body>
 </html>

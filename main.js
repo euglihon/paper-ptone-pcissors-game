@@ -60,15 +60,18 @@ const publishResult = (result) => {
     winSpan.textContent = gameSummery.win;
     gameWins.textContent =gameSummery.win;
     whoWin.textContent = 'You win !!!';
+    whoWin.style.color ='green';
   } else if(result === 'loss') {
     gameSummery.losses++;
     lossesSpan.textContent = gameSummery.losses;
     gameLosses.textContent = gameSummery.losses;
     whoWin.textContent = 'AI win :(';
+    whoWin.style.color ='red';
   } else {
     gameSummery.draws++;
     gameDraws.textContent = gameSummery.draws;
     whoWin.textContent = 'Draws :/';
+    whoWin.style.color ='blue';
   }
 };
 
@@ -94,6 +97,7 @@ btnPlay.addEventListener('click', () => {
   if(!game.playerHand) {
     gameAlert.classList.toggle('game__alert--modal');
   } else if(game.playerHand) {
+    document.querySelector('.game__panel-results').style.display = 'block';
     game.computerHand = computerChois();
     showModalBlockComputer(game.computerHand);
 
@@ -101,6 +105,9 @@ btnPlay.addEventListener('click', () => {
     publishResult(gameResult);
     endGame();
   }
+
+
+
 });
 
 

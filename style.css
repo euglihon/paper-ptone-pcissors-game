@@ -180,10 +180,12 @@ svg {
 }
 
 .game__panel-results {
+  width: fit-content;
   display: none;
   position: absolute;
   top: 88px;
-  right: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   color: #c2c2c2;
+  width: fit-content;;
 }

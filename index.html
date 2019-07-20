@@ -10,9 +10,8 @@
 </head>
 
 <body>
-
 <main class="game">
-  <h1 class="game__title">Paper-stone-scissors</h1>
+  <h1 class="game__title visually-hidden">Paper stone scissors</h1>
   <b class="game__score-title">Score</b>
   <p class="game__score"><span class="game__score--win">0</span> : <span class="game__score--losses">0</span></p>
 
@@ -33,19 +32,19 @@
 
     <div class="game-block game-block--computer">
       <b class="game-block__name">AI</b>
-      <svg width="50px" height="50px">
+      <svg>
         <use xlink:href="sprite.svg#paper"></use>
       </svg>
-      <svg width="50px" height="50px">
+      <svg>
         <use xlink:href="sprite.svg#stone"></use>
       </svg>
-      <svg width="50px" height="50px">
+      <svg>
         <use xlink:href="sprite.svg#scissors"></use>
       </svg>
     </div>
   </div>
 
-  <p class="game__panel-win">who will win ?</p>
+  <p class="game__panel-win">Who will win ?</p>
   <button class="game__btn">Let's play!</button>
   <div class="game__panel-results">
     <p class="game__wins">win: <span>0</span></p>
@@ -53,6 +52,7 @@
     <p class="game__draws">draw: <span>0</span></p>
   </div>
   <div class="game__alert">Pick your hand</div>
+
   <script src="main.js"></script>
 </body>
 </html>

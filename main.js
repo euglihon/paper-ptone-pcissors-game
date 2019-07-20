@@ -16,6 +16,9 @@ const gameAlert = document.querySelector('.game__alert');
 const svgModal =  document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 const svgModalComputer =  document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
+const whoWin = document.querySelector('.game__panel-win');
+const pickHandAgain = document.createElement('div');
+
 //выводим модальное окно
 const showModalBlock = (playElement) => {
   svgModal.classList.add('player-svg--modal');
@@ -49,11 +52,17 @@ const checkResult = (player, computer) => {
 const publishResult = (result) => {
   const winSpan = document.querySelector('.game__score--win');
   const lossesSpan = document.querySelector('.game__score--losses');
-  const whoWin = document.querySelector('.game__panel-win');
 
   const gameWins = document.querySelector('.game__wins span');
   const gameLosses = document.querySelector('.game__losses span');
   const gameDraws = document.querySelector('.game__draws span');
+
+
+
+
+  pickHandAgain.textContent = 'pick your hand again';
+  pickHandAgain.style.color = 'red';
+  document.querySelector('.game').appendChild(pickHandAgain);
 
   if(result === 'win') {
     gameSummery.win++;
@@ -85,10 +94,13 @@ hands.forEach(hand => hand.addEventListener('click', (e) => {
 
 const endGame = () => {
   game.playerHand = '';
-  game.computerHand ='';
+  game.computerHand = '';
 
   hands.forEach(hand => hand.addEventListener('click', () => {
     svgModalComputer.remove();
+    whoWin.textContent = 'try again';
+    whoWin.style.color = 'black';
+    pickHandAgain.remove();
   }));
 };
 
@@ -105,9 +117,6 @@ btnPlay.addEventListener('click', () => {
     publishResult(gameResult);
     endGame();
   }
-
-
-
 });
 
 
